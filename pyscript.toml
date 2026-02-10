@@ -15,7 +15,6 @@ files = [
     "assets/tiles/floor.png",
     "assets/tiles/plataform.png",
     "assets/sounds/jump.mp3",
-    "assets/sounds/pickup.mp3",
     "assets/sounds/gameover.mp3",
     "assets/sounds/powerup.mp3",
     "assets/sounds/victory.mp3",
