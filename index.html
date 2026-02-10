@@ -4,23 +4,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Robo Collector: Hardcore</title>
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
     <style>
-        body { background-color: #05050f; color: white; text-align: center; margin: 0; overflow: hidden; }
-        #loading { position: fixed; width: 100%; top: 50%; }
+        body { 
+            background-color: #05050f; 
+            color: white; 
+            text-align: center; 
+            margin: 0; 
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        /* Estilo para que el canvas de Pygame se vea bien */
+        canvas {
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff;
+        }
     </style>
 </head>
 <body>
-    <div id="loading">Cargando módulos de Python...</div>
+
+    <py-config src="./pyscript.toml"></py-config>
+
+    <py-script src="./main.py"></py-script>
+
     <canvas id="pygame-canvas"></canvas>
 
-    <script type="py" config="./pyscript.toml">
-        import asyncio
-        import main
-        # Quitamos el mensaje de carga cuando inicie
-        from js import document
-        document.getElementById("loading").style.display = "none"
-    </script>
 </body>
 </html>
