@@ -1,9 +1,24 @@
 name = "Robot Recolector"
-description = "Juego para mi novia"
+description = "Edición Hardcore para mi novia"
 
-# Cargamos Pygame (la versión optimizada para web)
+# Cargamos pygame-ce (Community Edition, mejor para web)
 packages = ["pygame-ce"]
 
-# LISTA AQUÍ TODOS TUS ARCHIVOS
-# Esto es crítico: si falta una imagen, el juego no arranca
-files = ["main.py", "assets/robot.png", "assets/fondo.png"]
+# LISTADO DE TODOS TUS ARCHIVOS (Añade todos los que faltan aquí)
+files = [
+    "main.py",
+    "herramientas.py",
+    "interfaz/botones.py",
+    "assets/sprites/robot_img.png",
+    "assets/sprites/enemy_img.png",
+    "assets/sprites/battery_img.png",
+    "assets/sprites/door.png",
+    "assets/tiles/floor.png",
+    "assets/tiles/plataform.png",
+    "assets/sounds/jump.mp3",
+    "assets/sounds/pickup.mp3",
+    "assets/sounds/gameover.mp3",
+    "assets/sounds/powerup.mp3",
+    "assets/sounds/victory.mp3",
+    "assets/sounds/music.mp3"
+]
