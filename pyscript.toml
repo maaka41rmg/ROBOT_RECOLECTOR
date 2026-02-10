@@ -1,8 +1,7 @@
 name = "Robot Recolector"
-description = "Robot Recolector Hardcore"
 
-# Cambia "pygame-ce" por "pygame" exactamente
-packages = ["pygame"]
+# Dejamos esto vacío para que no busque en PyPI
+packages = []
 
 [[fetch]]
 files = [
