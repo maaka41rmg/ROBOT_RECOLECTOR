@@ -1,0 +1,9 @@
+name = "Robot Recolector"
+description = "Juego para mi novia"
+
+# Instalamos la versión de Pygame para web
+packages = ["pygame-ce"]
+
+# Listamos todos los archivos que el navegador debe descargar
+# Asegúrate de poner aquí TODAS tus imágenes y sonidos
+files = ["main.py", "assets/robot.png", "assets/fondo.png"]
