@@ -1,7 +1,7 @@
 name = "Robot Recolector"
 
-# Para esta versión de PyScript, usamos pygame-ce
-packages = ["pygame-ce"]
+# USAR "pygame" a secas, no "pygame-ce"
+packages = ["pygame"]
 
 [[fetch]]
 files = [
