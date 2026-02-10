@@ -4,6 +4,17 @@ import random
 import os
 import sys
 
+async def main(): # Añade 'async' antes de 'def'
+    # ... todo tu código de inicio (pygame.init, etc) ...
+    
+    running = True
+    while running:
+        # ... tu código de eventos y dibujo ...
+
+        pygame.display.flip()
+        
+        # ESTA LÍNEA ES OBLIGATORIA EN LA WEB
+        await asyncio.sleep(0)
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
 
