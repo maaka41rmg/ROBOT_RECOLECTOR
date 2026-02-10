@@ -1,10 +1,9 @@
 name = "Robot Recolector"
-description = "Edición Hardcore"
 
-# Cambiamos "pygame-ce" por "pygame" (la versión web estándar)
-packages = ["pygame"]
+# Para esta versión de PyScript, usamos pygame-ce
+packages = ["pygame-ce"]
 
-# Asegúrate de que la lista de archivos sea exacta
+[[fetch]]
 files = [
     "main.py",
     "herramientas.py",
