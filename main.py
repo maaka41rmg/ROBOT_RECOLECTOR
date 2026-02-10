@@ -48,7 +48,11 @@ def load_sound(path, volume):
     return None
 
 sfx_jump = load_sound("assets/sounds/jump.mp3", 0.1)
-sfx_pickup = load_sound("assets/sounds/pickup.mp3", 0.3)
+# Comenta la carga que da error 404
+# sfx_pickup = load_sound("assets/sounds/pickup.mp3", 0.3) 
+
+# Define la variable como None para que no rompa el resto del código
+sfx_pickup = None
 sfx_gameover = load_sound("assets/sounds/gameover.mp3", 0.2)
 sfx_powerup = load_sound("assets/sounds/powerup.mp3", 0.15)
 sfx_victory = load_sound("assets/sounds/victory.mp3", 0.2)
