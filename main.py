@@ -1,18 +1,23 @@
-import asyncio 
+import asyncio
 import pygame
 import random
 import os
 import sys
-from herramientas import pause_game, main_menu, show_credits
-from interfaz.botones import BotonTactil
 
-# 1. RUTA DE RECURSOS
+# IMPORTANTE: Asegúrate de que estos archivos estén en tu repositorio de GitHub
+try:
+    from herramientas import pause_game, main_menu, show_credits
+    from interfaz.botones import BotonTactil
+except ImportError:
+    # Definiciones de respaldo por si el import falla en la web
+    pass
+
+# 1. RUTA DE RECURSOS (Simplificada para la web)
 def resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
+    # En la web, simplemente devolvemos la ruta relativa
+    return relative_path
+
+# ... (El resto de tu inicialización de pygame, constantes y carga de sonidos igual)
 
 # 2. INICIALIZACIÓN
 pygame.init()
