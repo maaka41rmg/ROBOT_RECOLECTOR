@@ -10,18 +10,12 @@
     <canvas id="canvas"></canvas>
 
     <script type="py" config="./pyscript.toml">
-        import sys
-        import warnings
-        
-        # Forzamos la carga del pygame que viene en Pyodide
-        try:
-            import pygame
-        except ImportError:
-            from pyodide.wasm_tools import fetch_package
-            # Si no está, lo traemos del repositorio interno de Pyodide
-            import pygame 
+    import pygame
+    import asyncio
+    import main
 
-        import main
-    </script>
+    # Esto asegura que el loop de tu juego corra en la web
+    asyncio.ensure_future(main.main()) 
+</script>
 </body>
 </html>
