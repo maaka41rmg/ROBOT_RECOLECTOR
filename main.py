@@ -4,6 +4,9 @@ import random
 import os
 import sys
 
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+
 # IMPORTANTE: Asegúrate de que estos archivos estén en tu repositorio de GitHub
 try:
     from herramientas import pause_game, main_menu, show_credits
