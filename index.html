@@ -14,8 +14,19 @@
 
     <script type="py" config="./pyscript.toml">
         import asyncio
-        import main
-        # El motor de PyScript ejecutará automáticamente el main.py
+        import micropip # El instalador de paquetes de la web
+
+        async def start_game():
+            # Esto busca la versión correcta para el navegador
+            await micropip.install("pygame-ce") 
+            
+            # Una vez instalada, importamos tu juego
+            import main
+            # Si tu main.py tiene una función asíncrona principal:
+            # await main.main() 
+
+        # Ejecutamos la carga
+        asyncio.ensure_future(start_game())
     </script>
 </body>
 </html>
