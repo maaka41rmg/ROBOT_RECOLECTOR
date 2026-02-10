@@ -1,40 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Robo Collector: Hardcore</title>
-    
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
-    <style>
-        body { 
-            background-color: #05050f; 
-            color: white; 
-            text-align: center; 
-            margin: 0; 
-            overflow: hidden; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        /* Estilo para que el canvas de Pygame se vea bien */
-        canvas {
-            border: 2px solid #00ffff;
-            box-shadow: 0 0 20px #00ffff;
-        }
-    </style>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
 </head>
 <body>
-
-    <py-config src="./pyscript.toml"></py-config>
-
-    <py-script src="./main.py"></py-script>
-
     <canvas id="pygame-canvas"></canvas>
 
+    <script type="py" config="./pyscript.toml">
+        import asyncio
+        import main
+    </script>
 </body>
 </html>
