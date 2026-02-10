@@ -1,7 +1,8 @@
 name = "Robot Recolector"
+description = "Robot Recolector Hardcore"
 
-# No pongas nada en packages aquí si te da el error de 'wheel'
-packages = []
+# Cambia "pygame-ce" por "pygame" exactamente
+packages = ["pygame"]
 
 [[fetch]]
 files = [
