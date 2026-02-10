@@ -2,31 +2,19 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Robot Recolector</title>
-    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
-    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+    <title>Robo Collector: Hardcore</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
     <style>
-        body { background-color: #05050f; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        body { background-color: #05050f; color: white; text-align: center; margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh; }
+        canvas { border: 2px solid #00ffff; }
     </style>
 </head>
 <body>
-    <canvas id="pygame-canvas"></canvas>
+    <canvas id="canvas"></canvas>
 
     <script type="py" config="./pyscript.toml">
-        import asyncio
-        import micropip # El instalador de paquetes de la web
-
-        async def start_game():
-            # Esto busca la versión correcta para el navegador
-            await micropip.install("pygame-ce") 
-            
-            # Una vez instalada, importamos tu juego
-            import main
-            # Si tu main.py tiene una función asíncrona principal:
-            # await main.main() 
-
-        # Ejecutamos la carga
-        asyncio.ensure_future(start_game())
+        import main
     </script>
 </body>
 </html>
