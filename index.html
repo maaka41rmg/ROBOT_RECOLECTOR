@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="utf-8">
+    <title>Robot Recolector</title>
     <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+    <style>
+        body { background-color: #05050f; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    </style>
 </head>
 <body>
     <canvas id="pygame-canvas"></canvas>
@@ -10,6 +15,7 @@
     <script type="py" config="./pyscript.toml">
         import asyncio
         import main
+        # El motor de PyScript ejecutará automáticamente el main.py
     </script>
 </body>
 </html>
