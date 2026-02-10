@@ -1,10 +1,10 @@
 name = "Robot Recolector"
-description = "Edición Hardcore para mi novia"
+description = "Edición Hardcore"
 
-# Cargamos pygame-ce (Community Edition, mejor para web)
-packages = ["pygame-ce"]
+# Cambiamos "pygame-ce" por "pygame" (la versión web estándar)
+packages = ["pygame"]
 
-# LISTADO DE TODOS TUS ARCHIVOS (Añade todos los que faltan aquí)
+# Asegúrate de que la lista de archivos sea exacta
 files = [
     "main.py",
     "herramientas.py",
