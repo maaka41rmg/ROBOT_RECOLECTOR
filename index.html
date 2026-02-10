@@ -2,18 +2,25 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Robo Collector: Hardcore</title>
+    <title>Robo Collector</title>
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-    <style>
-        body { background-color: #05050f; color: white; text-align: center; margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh; }
-        canvas { border: 2px solid #00ffff; }
-    </style>
 </head>
 <body>
     <canvas id="canvas"></canvas>
 
     <script type="py" config="./pyscript.toml">
+        import sys
+        import warnings
+        
+        # Forzamos la carga del pygame que viene en Pyodide
+        try:
+            import pygame
+        except ImportError:
+            from pyodide.wasm_tools import fetch_package
+            # Si no está, lo traemos del repositorio interno de Pyodide
+            import pygame 
+
         import main
     </script>
 </body>
