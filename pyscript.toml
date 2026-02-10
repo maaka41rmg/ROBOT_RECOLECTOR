@@ -1,7 +1,7 @@
 name = "Robot Recolector"
 
-# Dejamos esto vacío para que no busque en PyPI
-packages = []
+# PyScript buscará la versión compatible automáticamente
+packages = ["pygame"]
 
 [[fetch]]
 files = [
